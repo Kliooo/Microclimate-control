@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# Simulation data (created at runtime)
+simulation_data/
+
+# Documentation artifacts
+txt/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Editors & IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temp scripts
+src/_count_funcs.py

@@ -1,0 +1,120 @@
+geometry:
+  floor_area_m2: 30.0
+  ceiling_height_m: 3.0
+
+envelope:
+  wall_area_m2: 45.0
+  wall_u_value: 0.35
+  window_area_m2: 8.0
+  window_u_value: 1.5
+  window_g_factor: 0.6
+  window_orientation: south
+  floor_u_value: 0.25
+  ceiling_u_value: 0.20
+  ground_temperature_c: 10.0
+  ceiling_adjacent_temp_c: 20.0
+
+thermal_mass:
+  effective_capacity_kj_per_k: 18000.0
+
+ventilation:
+  infiltration_ach: 0.3
+
+internal_gains:
+  heat_per_person_w: 100.0
+  co2_per_person_lps: 0.005
+  moisture_per_person_gh: 50.0
+  equipment_heat_w: 2000.0
+  occupancy_profile:
+    0: 0
+    1: 0
+    2: 0
+    3: 0
+    4: 0
+    5: 0
+    6: 0
+    7: 5
+    8: 18
+    9: 20
+    10: 20
+    11: 20
+    12: 15
+    13: 20
+    14: 20
+    15: 20
+    16: 20
+    17: 10
+    18: 0
+    19: 0
+    20: 0
+    21: 0
+    22: 0
+    23: 0
+
+lighting:
+  artificial_lux: 250
+  artificial_on_with_people: true
+  max_natural_lux_summer: 800
+  max_natural_lux_winter: 250
+
+climate:
+  season: winter
+  winter:
+    temp_min_c: -8.0
+    temp_max_c: -2.0
+    humidity_mean: 80.0
+    cloud_cover_mean: 0.7
+    solar_max_w_m2: 150.0
+  spring:
+    temp_min_c: 3.0
+    temp_max_c: 12.0
+    humidity_mean: 65.0
+    cloud_cover_mean: 0.5
+    solar_max_w_m2: 400.0
+  summer:
+    temp_min_c: 16.0
+    temp_max_c: 26.0
+    humidity_mean: 55.0
+    cloud_cover_mean: 0.4
+    solar_max_w_m2: 600.0
+  autumn:
+    temp_min_c: 2.0
+    temp_max_c: 10.0
+    humidity_mean: 75.0
+    cloud_cover_mean: 0.6
+    solar_max_w_m2: 200.0
+
+initial_conditions:
+  mode: comfort
+  temperature_c: 22.0
+  humidity_pct: 45.0
+  co2_ppm: 450.0
+
+sensors:
+  temperature_noise_std: 0.05
+  humidity_noise_std: 0.3
+  co2_noise_std: 8.0
+  illuminance_noise_std: 5.0
+  outlier_probability: 0.002
+  outlier_magnitude: 0.12
+
+
+devices:
+  air_conditioner:
+    cooling_power_w: 7000
+    heating_power_w: 7000
+    cop_cooling: 3.5
+    cop_heating: 4.0
+  radiator:
+    heating_power_w: 3000
+  humidifier:
+    capacity_ml_h: 5500
+  dehumidifier:
+    capacity_ml_h: 2000
+  breather:
+    max_flow_m3h: 950
+    has_heater: true
+    heater_power_w: 3000
+  blinds:
+    solar_block_factor: 0.85
+    light_block_factor: 0.80
